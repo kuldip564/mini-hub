@@ -7,12 +7,15 @@ import HomeLayout from "../../layout/HomeLayout";
 import { getUserData } from "../../Redux/Slices/Authslices";
 
 function Profile() {
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [big, setBig] = useState(false);
     const [selectedImg, setSelectedImg] = useState(null);
     const userData = useSelector((state) => state?.auth?.data);
     // console.log(userData.post);
+    console.log(userData,"this data");
+    
 
     async function handleCancellation() {
         toast("Initiating cancellation");

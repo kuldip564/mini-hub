@@ -236,8 +236,7 @@ const authclice = createSlice({
             state.data = {}
             state.isLoggedIn = false
             state.role = ''
-        })
-            .addCase(getUserData.fulfilled, (state, action) => {
+        }).addCase(getUserData.fulfilled, (state, action) => {
                 if (!action?.payload?.user) return;
                 localStorage.setItem("data", JSON.stringify(action?.payload?.user));
                 localStorage.setItem("isLoggedIn", true);
@@ -249,16 +248,6 @@ const authclice = createSlice({
                 state.role = action?.payload?.user?.role
                 state.following = action?.payload?.user?.following || '';
                 state.followers = action?.payload?.user?.followers || '';
-
-            })
-            .addCase(getUserData.rejected, (state) => {  
-                console.log("hello");
-                localStorage.clear();
-                state.isLoggedIn = false;
-                state.data = {};
-                state.role = '';
-                console.log(state,'state');
-                console.log('hello');  
             })
     }
 })

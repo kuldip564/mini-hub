@@ -3,7 +3,6 @@ import { FiMenu } from 'react-icons/fi'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
-
 import Footer from '../componet/Footor';
 import { logout } from '../Redux/Slices/Authslices';
 
@@ -22,6 +21,7 @@ const HomeLayout = ({ children }) => {
         elment.checked = false;
         chengWidth();
     }
+
     async function hendalLogout(e) {
         e.preventDefault();
         try {
@@ -94,7 +94,7 @@ const HomeLayout = ({ children }) => {
                 </div>
             </div>
 
-            <div className="pt-4 pb-8 px-2 min-h-[80vh]">{children}</div>
+            <div className=" pb-8 min-h-[80vh]">{children}</div>
             <Footer />
         </div>
     )

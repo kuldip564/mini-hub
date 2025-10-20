@@ -22,6 +22,8 @@ import Search from './pages/AddToFrind/Search';
 import Followinguser from './pages/user/followinguser';
 import AddPost from './pages/user/AddPost';
 import Feed from './pages/user/Feed';
+import Chating from './pages/Chating/Chating';
+
 
 function App() {
   return (
@@ -46,6 +48,7 @@ function App() {
       <Route path='/search'element={<Search/>}/>
       <Route path='/addPost' element={<AddPost/>}/>
       <Route path='/feed' element={<Feed/>}/>
+      <Route path='/chating' element={<Chating/>}/>
       </Route>
       <Route path='*' element={<NotFound/>} />
     </Routes>

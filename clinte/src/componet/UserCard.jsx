@@ -31,7 +31,6 @@ const UserCard = ({ user, currentUser, onUserUpdate }) => {
       }
     }
   };
-
   return (
     <div
       key={user._id}
